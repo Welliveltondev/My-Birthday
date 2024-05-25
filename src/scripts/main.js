@@ -9,8 +9,8 @@ const contaTempo = setInterval(function(){
 
     const diasAteOEvento = Math.floor(distanciaDoEvento / (1000 * 60 * 60 * 24));
     const horasAteOEvento =  Math.floor((distanciaDoEvento % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutosAteOEvento = Math.floor(diasAteOEvento % (1000 * 60 *60)) / (1000 * 60);
-    const segundosAteOEvento = Math.floor(diasAteOEvento % (1000 * 60) / 1000);
+    const minutosAteOEvento = Math.floor((diasAteOEvento % (1000 * 60 *60)) / (1000 * 60));
+    const segundosAteOEvento = Math.floor((diasAteOEvento % (1000 * 60) / 1000));
 
     document.getElementById('contador').innerHTML = `${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s`;
 
