@@ -1,5 +1,4 @@
 @use 'variaveis';
-@use 'sobre';
 
 *{
     margin: 0;
@@ -8,11 +7,7 @@
     font-family: Pacifico, sans-serif;
 }
 
-.container-flex {
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
-}
+
 
 .container {
     max-width:100%;
@@ -20,9 +15,10 @@
 }
 .cabeca {
     display: block;
-    background-image: linear-gradient(variaveis.$corDeFundo1, variaveis.$corBraca);
+    background-image: linear-gradient(variaveis.$corDeFundo2, variaveis.$corBraca);
     padding: 30px 0;
     width: 100%;
+    height: 120%;
     
     &__nome {
         font-size: 22px;
@@ -52,12 +48,40 @@
 }
 
 .sobre {
+    width:100%;
+    padding: 30px;
+    background-image: linear-gradient(variaveis.$corBraca, variaveis.$corDeFundo2);
+    align-items: center;
 
-    &__title{
 
+    &__title {
+        text-align: center;
+        padding-top: 40px;
+        margin-bottom: 30px;
+        
     }
-    &__grupo{
-        &__local{
+
+    &__grupo {
+        display: flex;
+        max-width: 950;
+        width: 100%;
+        margin: 0 auto;
+        
+
+        &__avatar {
+            align-items: center;
+
+        &__image {
+            margin-right: 10px;
+            border-radius: 2px;
+            align-items: center;
+          }
         }
     }
+
+    .container-flex {
+        width: 100%;
+        align-items: center;
+    }
+
 }
